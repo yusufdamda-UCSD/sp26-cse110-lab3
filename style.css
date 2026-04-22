@@ -1,0 +1,196 @@
+/* General reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --primary: #3a86ff;
+  --card-bg: #e6f2ff;
+}
+
+/* Body */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg, #f0f2f5);
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+#main-header {
+  background-color: color-mix(in srgb, white 75%, #3a86ff 25%);
+  text-align: center;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+
+/* Cards */
+.card {
+  background-color: var(--card-bg, lightblue);
+
+  /* Longhand */
+  margin: 20px 30px 20px 30px;
+  padding: 10px 15px 10px 15px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+
+  /* Shorthand */
+  border: 2px solid black;
+
+  border-radius: 10px;
+}
+
+/* Headings */
+.subtitle {
+  color: rgb(40, 40, 40);
+}
+
+#agenda {
+  background-color: hsl(45, 100%, 90%);
+}
+
+.task-box {
+  background-color: hsla(140, 45%, 70%, 0.9);
+}
+h1, h2 {
+  color: var(--primary);
+}
+
+/* Attribute selector */
+[data-role="lead"] {
+  font-weight: bold;
+  color: orange;
+}
+
+/* Descendant */
+section ul {
+  color: black;
+}
+
+/* Child */
+nav > ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Adjacent sibling */
+h2 + p {
+  background-color: #eef;
+}
+
+/* General sibling */
+h2 ~ p {
+  font-style: italic;
+}
+
+/* Hover + active */
+a:hover {
+  color: red;
+}
+
+button:active {
+  background-color: gray;
+}
+
+/* Display */
+nav li {
+  display: inline-block;
+  margin: 0.5em;
+}
+
+footer p {
+  display: inline;
+}
+
+.subtitle {
+  display: block;
+}
+
+section.card {
+  width: 85%;
+}
+
+.hidden-example {
+  display: none;
+}
+
+/* Text */
+p {
+  text-align: left;
+  color: #222;
+  text-decoration: none;
+}
+
+/* Flexbox */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.task-box {
+  background-color: rgba(120, 200, 150, 0.8);
+  padding: 10px;
+  width: 100px;
+  height: 60px;
+}
+
+/* Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.grid-item {
+  background-color: color(display-p3 0.75 0.88 1);
+  padding: 1cm;
+  border: 1pt solid black;
+  min-width: 50mm;
+  max-width: 120mm;
+}
+
+/* Position */
+footer {
+  position: relative;
+  left: 10px;
+}
+
+/* Units */
+main {
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+  font-size: 1.1em;
+}
+
+/* :has selector */
+section:has(ol) {
+  background-color: #fff0cc;
+}
+
+/* Nested selector */
+main {
+  & section {
+    background-color: #f8fbff;
+  }
+}
+
+/* Media query */
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  nav li {
+    display: block;
+  }
+}

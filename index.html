@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      .internal-example {
+        background-color: yellow;
+      }
+    </style>
     <meta charset="UTF-8">
     <title>Meeting Minutes</title>
     <link rel="icon" href="assets/diagram.jpg">
   </head>
   <body>
-    <header> 
+    <header id="main-header"> 
         <h1>Pomodoro Timer First Brainstorm</h1>
-        <p>Brainstorming Meeting</p>
+        <p class="internal-example">Brainstorming Meeting</p>
         <p>April 15, 2026</p>
         <nav>
-            <a href="#attendance">Attendance</a><br>
-            <a href="#agenda">Agenda</a><br>
-            <a href="#unfinished-business">Unfinished Business</a><br>
-            <a href="#new-business">New Business</a><br>
-            <a href="#misc">Miscellaneous</a><br>
-            <a href="#media">Diagrams and Media</a><br>
-            <a href="#feedback-form">Feedback Form</a>
+          <ul>
+            <li><a href="#attendance">Attendance</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#unfinished-business">Unfinished Business</a></li>
+            <li><a href="#new-business">New Business</a></li>
+            <li><a href="#misc">Miscellaneous</a></li>
+            <li><a href="#media">Diagrams and Media</a></li>
+            <li><a href="#feedback-form">Feedback Form</a></li>
+          </ul>
         </nav>
     </header>
 
@@ -28,11 +40,11 @@
 
         <hr>
 
-        <section id="attendance">
+        <section id="attendance" class="card">
             <h2>Attendance</h2>
             <h3>Present</h3>
             <ul>
-                <li>Yusuf</li>
+                <li data-role="lead">Yusuf</li>
                 <li>Reginald</li>
                 <li>Fernando</li>
             </ul>
@@ -42,7 +54,7 @@
             </ul>
         </section>
 
-        <section id="agenda">
+        <section id="agenda" class="card">
             <h2>Agenda</h2>
             <ol>
                 <li>Discuss overview of meeting.</li>
@@ -56,6 +68,7 @@
             <h2>Unfinished Business</h2>
             <p>This is our first meeting! No unfinished business at the moment.         
             </p>
+            <p style="color: orange;">Inline styled text</p>
         </section>
 
         <section id="new-business">
@@ -65,7 +78,12 @@
                 <li>Create new deadlines.</li>
                 <li>Consider new problems that could arise.</li>
                 <li>Everyone will give their input on new ideas.</li>
-            </ul>   
+            </ul>
+            <div class="flex-container">
+              <div class="task-box">Feature Ideas</div>
+              <div class="task-box">UI Design</div>
+              <div class="task-box">Testing</div>
+            </div>   
         </section>
         <section id="misc">
             <h2>Miscellaneous Comments / Questions / Concerns</h2>
@@ -103,9 +121,14 @@
               <source src="assets/meeting-video.mp4" type="video/mp4">
               Your browser does not support the video element.
             </video>
+          <div class="grid-container">
+            <div class="grid-item">Planner</div>
+            <div class="grid-item">Designer</div>
+            <div class="grid-item">Developer</div>
+          </div>
         </section>
         
-        <section id="feedback-form">
+        <section id="feedback-form" class="card">
           <h2>Feedback Form</h2>
 
           <form>
@@ -167,9 +190,10 @@
             </fieldset>
           </form>
         </section>
+      <p class="hidden-example">This text is hidden</p>
     </main>
 
-    <footer>
+    <footer class="card">
         <p>Created for CSE110 Lab2.</p>
     </footer>
   </body>
