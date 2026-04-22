@@ -2,3 +2,5 @@
 
 Published site URL:
 https://yusufdamda-ucsd.github.io/sp26-cse110-lab3/
+
+Lab 3 setup completed.
